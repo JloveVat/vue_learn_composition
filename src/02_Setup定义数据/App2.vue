@@ -3,12 +3,21 @@
     <form action="">
       账号: <input type="text" v-model="account.username" /> 密码: <input type="password" v-model="account.password" />
     </form>
+    <form action="">
+      账号: <input type="text" v-model="username" /> 密码: <input type="password" v-model="password" />
+    </form>
+    <hr>
+    <ShowInfo name="jingyou" :age="22"></ShowInfo>
   </div>
 </template>
 
 <script>
 import { onMounted, reactive, ref } from 'vue'
+import ShowInfo from './ShowInfo.vue'
 export default {
+  components: {
+    ShowInfo
+  },
   setup() {
     // 定义响应式数据: reactive/ref
     // 强调: ref也可以定义复杂的数据
@@ -22,6 +31,11 @@ export default {
       username: 'jingyou',
       password: 'jysh'
     })
+
+    const username = ref('jingyou')
+    const password = ref('123456')
+    const name = ref('jingyou')
+    const age = ref(22)
 
     // 2.ref的应用场景: 其他的场景基本都用ref(computed)
     // 2.1.定义本地的一些简单数据
@@ -38,7 +52,11 @@ export default {
 
     return {
       info,
-      account
+      account,
+      username,
+      password,
+      name,
+      age
     }
   }
 }

@@ -16,6 +16,8 @@
     <component :is="currentPage"></component>
     <h2>{{ scrollX }} -- {{ scrollY }}</h2>
 
+    <div class="content"></div>
+
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -61,5 +63,9 @@ export default {
 </script>
 
 <style scoped>
-
+.content {
+  width: 3000px;
+  height: 100px;
+  background-color: #00adff;
+}
 </style>

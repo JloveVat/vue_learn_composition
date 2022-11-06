@@ -17,5 +17,5 @@ export default function useTitle(titleValue) {
   )
 
   // 返回ref
-  return title
+  return { title }
 }
